@@ -1,6 +1,6 @@
 import React from 'react';
 import CarsPage from './CarsPage';
-import carsData from '@/data/data';
+import carsData from"../../data/data";
 import styles from './AllCarsPage.module.css'
 
 const AllCarsPage = () => {
