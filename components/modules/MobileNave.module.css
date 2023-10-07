@@ -1,0 +1,84 @@
+
+.spanContainer{
+    display: flex;
+    flex-direction: column;
+    cursor:pointer;
+    gap: 5px;
+    position: relative;
+    z-index: 2;
+    left: 0px;
+    
+}
+
+.spanContainer span{
+    width: 45px;
+    height: 5px;
+    background-color: white;
+    border-radius: 5px;
+   transition: .5s ease;
+
+}
+
+
+.linksContainer{
+  display: flex;
+  transform: translateX(-100%);
+  height: 100vh;
+  background-color: lightblue;
+  z-index: 1;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  color: black;
+  width: 50%;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.linkSubContainer{
+  width: fit-content;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+.linksContainer li{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top:50px ;
+}
+
+.linksContainer a{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.Categories{
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  background-color: lightblue;
+  transform: translate(0px , -90px);
+  border-radius: 5px;
+  gap: 20px;
+  transition: .2s ease;
+  padding: 10px;
+  pointer-events:none;
+}
+
+.linksContainer svg{
+    color: rgb(4, 140, 185);
+}
+
+.linksContainer span{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: .2s ease;
+  
+}
+
+.linksContainer span:active{
+  scale: 1.1;
+}

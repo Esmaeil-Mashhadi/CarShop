@@ -1,0 +1,31 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family:'Times New Roman', Times, serif;
+  
+}
+body{
+  background-color:  RGB(20, 33, 61);
+  overflow-x: hidden;
+  color: white;
+  max-width: 1800px;
+  margin: auto;
+}
+
+a{
+  text-decoration: none;
+}
+
+ul{
+  list-style-type: none;
+  padding: 0;
+  
+}
+
+a{
+  color: inherit;
+}
+
+
+
