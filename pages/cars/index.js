@@ -1,5 +1,5 @@
-import carsData from "@/data/CarData";
-import CarPage from "@/components/template/CarPage";
+import carsData from "../../data/data";
+import CarsPage from "../../components/templates/CarsPage"
 
 const allCars = () => {
     return (
