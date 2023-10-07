@@ -4,7 +4,7 @@ import CarsPage from "../../components/templates/CarsPage"
 const allCars = () => {
     return (
         <div>
-           <CarPage data = {carsData}/>
+           <CarsPage data = {carsData}/>
         </div>
     );
 };
