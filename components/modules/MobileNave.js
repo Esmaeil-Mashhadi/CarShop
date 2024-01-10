@@ -10,7 +10,7 @@ import {AiTwotoneHome} from 'react-icons/ai'
 import {FcAbout} from 'react-icons/fc'
 import {MdContactPhone} from 'react-icons/md'
 import {FaCarSide} from 'react-icons/fa'
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { styled } from 'styled-components';
 
 
@@ -43,6 +43,7 @@ transition: .2s ease;
    pointer-events:${props=>props.catclick ? `all` :`none`}
  
  `
+ // just testing styled component in next 
 const MobileNave = () => {
     
     
