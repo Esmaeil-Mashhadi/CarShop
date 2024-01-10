@@ -8,44 +8,21 @@ import HomeCard from '@/components/modules/HomeCard'
 
 export default function Home() {
     const [currentIndex , setCurrentIndex] = useState(0)
-    const [slide , setSlide] = useState(false)
-    const [fadeR , setFadeR] = useState(false)
-    const[fadeL , setFadeL] = useState(true)
-   
-    
-
      const maincars = carsData.slice(0,6)
  
-
-  const goToLeft = ()=> {
-
-    setFadeR(false)
-     if (currentIndex === 1){
-      setFadeL(true)}
-
-      if(currentIndex === 0){
-
-        return
+     const goToRight  = ()=>{
+      if(currentIndex == 5){
+        return setCurrentIndex(0)
       }
-    
-    setCurrentIndex(currentIndex -1)
-    setSlide(!slide)
-  
-    }
+      setCurrentIndex((prev)=> prev + 1)
+     }
 
-    const goToRight = ()=>{ 
-      setFadeL(false)
-      if(currentIndex ===4){
-        setFadeR(true)
+     const goToLeft = ()=>{
+      if(currentIndex == 0){
+        return setCurrentIndex(5)
       }
-      if(currentIndex === 5) {
-        return
-      }
-      setCurrentIndex(currentIndex +1)
-      setSlide(!slide)  
-  
-    }
-
+      setCurrentIndex((prev) => prev - 1)
+     }
 
 return (
     <div className={styles.container} >
@@ -53,13 +30,13 @@ return (
         <FilterPrice/>
          <Categories/>
       </div>
+       <div className={styles.subContainer}>
 
-          <div className={styles.subContainer}>
-        <div className={slide ? styles.slider : styles.sliderp}>
-          <HomeCard props = {maincars[currentIndex]} goToLeft = {goToLeft}  goToRight = {goToRight} fadeR={fadeR} fadeL={fadeL}/>
-        </div>
+         <div >
+          <HomeCard goToLeft={goToLeft}  goToRight={goToRight} props = {maincars[currentIndex]} />
+         </div>
        
-        </div>
+      </div>
     </div>
   )
 }

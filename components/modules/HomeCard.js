@@ -5,18 +5,18 @@ import Money from '@/icons/Money';
 import {AiOutlineDoubleRight} from 'react-icons/ai'
 import {AiOutlineDoubleLeft} from 'react-icons/ai'
 
-const HomeCard = ({props , goToLeft , goToRight , fadeL , fadeR}) => {
+const HomeCard = ({props , goToLeft , goToRight }) => {
     const {id , name , model , year , distance , location , image , price} = props;
   
     return (
       
     
-     <div className={styles.container}>
+    <div className={styles.container}>
       <Link href={`/Details/${id}`}><img src={image} className={styles.image} />
         <span className={styles.latest}>LATEST CARS !</span> </Link>
          
         
-        <div className={styles.subContainer}>
+      <div className={styles.subContainer}>
         <h2 className={styles.name}>{name}</h2>
         <h3 className={styles.model}> <span style={{color:'lightGrey'}}>Model :</span> {model}</h3>
         <h4 className={styles.year}> <span style={{color:'lightGrey'}}>Year : </span> {year}</h4> 
@@ -31,14 +31,14 @@ const HomeCard = ({props , goToLeft , goToRight , fadeL , fadeR}) => {
             <div className={styles.price}>{price} $</div>
           </div>
      
-        <aside  onClick={goToRight} className={ fadeR ? styles.fadeR: styles.right}>
+        <aside  onClick={goToRight} className={styles.nextSvg}>
             <AiOutlineDoubleRight/>
         </aside>
 
-        <aside onClick={goToLeft} className= {fadeL ? styles.fadeL : styles.left}>
+        <aside onClick={goToLeft} className={styles.prevSvg} >
             <AiOutlineDoubleLeft />
         </aside> 
-        </div>
+       </div>
 
     
      </div> 

@@ -7,6 +7,7 @@
   margin:auto;
   justify-content: space-around;
   gap: 50px;
+  max-height: 500px;
  }
 
  .container a{
@@ -17,13 +18,17 @@
  width: 300px;
  display: flex;
  flex-direction: column;
+ justify-content: center;
  gap: 20px;
  padding: 50px;
- height: fit-content;
+ max-height: 100%;
  box-shadow: inset 0px 0px 10px black;
  border-radius: 10px;
- font-size: x-large;
+ font-size: 20px;
+ white-space: nowrap;
+
 }
+
 
 .image {
   width: 500px;
@@ -82,63 +87,30 @@
  font-weight: bold;
  }
 
-
-
-.right svg {
-  scale: 3;
+.nextSvg svg{
   position: absolute;
-  right:-25px;
+  right:-30px;
   top: 50%;
-  cursor: pointer;
-  transition: ease .2s;
- }
-
-
-.fadeR svg{
-  right:-25px;
   scale: 3;
-  position: absolute;
-  top: 50%;
+  transition: .1s ease;
   cursor: pointer;
-  opacity: .2;
 }
-
-.fadeL svg{
-  left:-25px;
-  scale: 3;
-  position: absolute;
-  top: 50%;
-  cursor: pointer;
-  opacity: .2;
-  
-}
-
-.left svg{
-    scale: 3;
-    position: absolute;
-    left: -25px;
-    top: 50%;
-    cursor: pointer;
-    transition: .2s;
-}
-
-.left svg:hover{
- scale: 3.5;
- 
-}
-.left svg:active{
- scale: 3.5;
- color: red;
-}
-
-.right svg:hover{
+.nextSvg svg:active{
   scale: 3.5;
-}
-
-.right svg:active{
-  scale: 4;
   color: red;
- }
+}
+.prevSvg svg{
+  position: absolute;
+  left:-30px;
+  top: 50%;
+  scale: 3;
+  transition: .1s ease;
+  cursor: pointer;
+}
+.prevSvg svg:active{
+  scale: 3.5;
+  color: red;
+}
 
  @media  screen and (min-width:720px) and (max-width:1210px) {
 

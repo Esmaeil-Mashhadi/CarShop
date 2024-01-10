@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import styles from './Layout.module.css'
 import Link from 'next/link';
 
@@ -22,7 +21,7 @@ const Layout = ({children}) => {
 
         <div className={styles.linkcontainer}> 
 
-        <Link href="/"><AiTwotoneHome/>Home</Link>
+        <Link  href="/"><AiTwotoneHome/>Home</Link>
         <Link href="/demo"> <FcAbout/> About us </Link>
         <Link href="/demo"> <MdContactPhone/> Contact us</Link>
         <Link href="/AllCars"> <FaCarSide/>See all Cars</Link>
