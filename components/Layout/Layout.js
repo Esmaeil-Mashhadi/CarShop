@@ -36,8 +36,8 @@ const Layout = ({children}) => {
         
          <Search />
         </header>
-      
-          {children}  
+              {children}  
+          
    
     
         <footer className={styles.footer}>Esmaeil Mashhadi Project | &copy;</footer>

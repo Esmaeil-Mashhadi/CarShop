@@ -1,26 +1,44 @@
 import styles from './Filter.module.css'
 import {FaSearch} from 'react-icons/fa'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Notification from './Notification';
+import carsData from '@/data/data';
 
 const FilterPrice = () => { 
-    const [min , setMin] = useState("")
-    const [max , setMax] = useState("")
+
     const [error , SetError] = useState(false)
-    
-   
+    const [priceData , setPriceData] = useState({})
+
+    useEffect(()=>{
+        const prices = carsData.map((item , index )=>{
+            return   item.price
+        })
+
+        setPriceData({min : Math.min(...prices) , max : Math.max(...prices)})
+    },[])
+
+
     const router = useRouter()
 
+    const changeHandler = (e)=>{
+        setPriceData({
+            ...priceData , [e.target.name] : e.target.value
+        })
+    }
+     
     const searchHandler = ()=> {
-        if(!min && !max || Number(max) < Number(min) ) {
+        if(!priceData.min && !priceData.max || Number(priceData.max) < Number(priceData.min) ) {
             router.push('/')
             SetError(true)
             setTimeout(() => {
                 SetError(false)
             }, 4000);
         } else{
-           router.push(`Filter/${min}/${max}`) 
+           router.push({
+            pathname:"/Filter",
+            query:{min:priceData.min , max:priceData.max}
+           }) 
         }
             
     }
@@ -30,10 +48,10 @@ const FilterPrice = () => {
         <> 
            <div className={styles.container}>
             <div className={styles.inputContainer}>
-            <input  placeholder='Enter Minimum Price' type='number' min={0} step={1000} value={min} onChange={(e)=> setMin(e.target.value)} />
-            <input  placeholder='Enter Maximum Price' type='number' min={0} step={1000} value={max} onChange={(e)=> setMax(e.target.value)}/>
+            <input name='min' title='enter Minum price' type='number' min={0} step={1000} value={priceData.min} onChange={changeHandler}/>
+            <input name='max' title='enter maximum price'  type='number' min={0} step={1000} value={priceData.max} onChange={changeHandler}/>
             </div>
-            <button onClick={searchHandler} className={styles.searchButton}> <FaSearch/> Search</button>
+            <button onClick={searchHandler} className={styles.searchButton}> <FaSearch/>search</button>
         </div> 
          {error &&  
 

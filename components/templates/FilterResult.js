@@ -3,9 +3,9 @@ import styles from './FilterResult.module.css'
 
 const FilterResult = ({result}) => {
     return (
-        <div>
-                   <>
-         {result.length ?   <div className={styles.container}>
+      <div>
+        <>
+         {result.length ? <div className={styles.container}>
             {result.map(item=> 
                <Card key={item.id} {...item}/> )}
         </div>
@@ -16,7 +16,7 @@ const FilterResult = ({result}) => {
         </div>
          
           } </>
-        </div>
+      </div>
     );
 };
 

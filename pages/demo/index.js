@@ -1,7 +1,7 @@
 
 const DemoPage = () => {
     return (
-        <div style={{textAlign:"center" , fontSize:"30px" , margin:"30px" , }}>
+        <div style={{textAlign:"center" , fontSize:"30px" , margin:"30px"}}>
             Welcome to our website! Please note that the addresses provided here are purely for demonstration purposes.
              This website is a demo version, and the addresses listed are not associated with any real-world locations or data.
               We aim to showcase the functionality of our platform without using actual addresses. 

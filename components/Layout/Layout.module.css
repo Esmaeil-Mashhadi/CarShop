@@ -6,11 +6,14 @@
   width: 1800px;
 }
 
+
+
 .header{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 50px 25px;
+    margin: 50px 0px;
+    width: 100%;
 }
 
 .linkcontainer{
@@ -101,7 +104,14 @@
 
 
 
-@media  screen and (min-width:720px) and (max-width:1210px) {
+
+
+@media  screen and (min-width:740px) and (max-width:1800px) {
+
+    .container{
+        width: 100%;
+    }
+
 
     .linkcontainer{
         font-size: 17px;
@@ -117,9 +127,12 @@
 
   }
 
-@media screen and (max-width:720px) {
+@media screen and (max-width:740px) {
     
-  
+   .container{
+    width: 500px;
+    justify-content: start;
+   }
    .linkcontainer{
     display: none;
    }
@@ -135,3 +148,10 @@
 
 }
 
+
+
+@media  screen and (max-width : 740px) {
+    .container{
+        width: 100%;
+    }
+}

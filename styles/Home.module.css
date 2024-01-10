@@ -1,4 +1,11 @@
 
+.container{
+   display: flex;
+   align-content: center;
+   flex-direction: column;
+   justify-content: center;
+   flex-grow: 1;
+}
 .subContainer{
  display: flex;
  justify-content: center;
